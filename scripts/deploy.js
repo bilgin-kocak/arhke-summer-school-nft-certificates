@@ -2,13 +2,14 @@ const { ethers } = require('hardhat');
 
 async function main() {
   const Arhke = await ethers.getContractFactory('Arkhe');
-  const arhke = await Arhke.deploy('Arkhe', 'ARK');
+  const arhke = await Arhke.deploy('Deneme', 'DNM');
 
   await arhke.deployed();
   console.log('Success! Contract was deployed to: ', arhke.address);
 
   await arhke.mint(
-    'https://ipfs.io/ipfs/QmYoVjXNGbAVHKucFJ3xw8MMxWqFXHtyWPLzf4EB8aLW4f'
+    '0x70997970C51812dc3A010C7d01b50e0d17dc79C8',
+    'https://ipfs.io/ipfs/bafkreih5je4ejvcljm26gbptwnf6wtzmvrqtc7iaythu7xbbkidfnmnabm'
   );
 
   console.log('NFT successfully minted');
