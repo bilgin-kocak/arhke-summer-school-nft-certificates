@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "compile":"npx hardhat compile",
-    "deploy":"npx hardhat run scripts/deploy.js --network mumbai"
+    "deploy":"npx hardhat run scripts/deploy.js --network mumbai",
+    "deploy-polygon":"npx hardhat run scripts/deploy.js --network polygon",
+    "mint-more":"npx hardhat run scripts/mintMore.js --network polygon"
   },
   "keywords": [],
   "author": "",
