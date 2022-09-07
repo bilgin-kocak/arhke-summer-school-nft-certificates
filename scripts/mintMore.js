@@ -18,8 +18,8 @@ async function main() {
   //   console.log('Contract name: ', name);
   // Minting
   const tx = await arkhe.mint(
-    '0xaA914171DAC56aBF7f9276DB843d0B98b45Ee4AA',
-    'https://ipfs.io/ipfs/bafkreifrk3v6lhlcg23edbvdjiw27sy3ujygagi5zhtemlg3xcaxvpg4ii',
+    '0x617F68F9587559ebB86E34152D49D8040fF62D98',
+    'https://ipfs.io/ipfs/bafkreia56xywuoakcryfdjwmvpliworuwunc62wqufv7j4q4sxjuue4dai',
     { gasPrice: 32000000000 }
   );
   console.log('Transaction: ', tx);
