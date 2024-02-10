@@ -1,9 +1,8 @@
 const PRIVATE_KEY = process.env.PRIVATE_KEY;
-const CONTRACT_ADDRESS = process.env.CONTRACT_ADDRESS;
-const contract = require('../artifacts/contracts/Arkhe.sol/ArkheProjesiBlokzinciri.json');
+const CONTRACT_ADDRESS = '0xAd4CA20fA7785F3C6869FCB3ae418B0aefBB5fdC';
+const contract = require('../artifacts/contracts/NeoHR.sol/NeoHR.json');
 
-const url =
-  'https://polygon-mainnet.g.alchemy.com/v2/XfcPlY-hY1r-HkuCUw9xENoZbVuk6A5w';
+const url = 'https://rpc-mumbai.maticvigil.com/';
 
 let httpProvider = new ethers.providers.JsonRpcProvider(url);
 
@@ -17,11 +16,7 @@ async function main() {
   //   const name = await arkhe.name();
   //   console.log('Contract name: ', name);
   // Minting
-  const tx = await arkhe.mint(
-    '0x617F68F9587559ebB86E34152D49D8040fF62D98',
-    'https://ipfs.io/ipfs/bafkreia56xywuoakcryfdjwmvpliworuwunc62wqufv7j4q4sxjuue4dai',
-    { gasPrice: 32000000000 }
-  );
+  const tx = await arkhe.mint5('0x48D185bc646534597E25199dd4d73692ebD98BAc');
   console.log('Transaction: ', tx);
   console.log('Minted');
 }

@@ -5,12 +5,12 @@ import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
 
-contract PassoGO is ERC721URIStorage, Ownable {
+contract NeoHR is ERC721URIStorage, Ownable {
     uint256 public _tokenId = 0;
     string public tokenURI =
-        "https://moccasin-weary-cat-358.mypinata.cloud/ipfs/QmZDh5WsaszqvpdzoYFXp2vKPvPbRL7UUch4QzFGg2LhcB/";
+        "https://moccasin-weary-cat-358.mypinata.cloud/ipfs/QmPY5i4328HLMYAoiWk2RwhiwBAKaDLJmcbaPqgMDb5fms/NeoHR/";
 
-    constructor() ERC721("PassoGO", "PGO") {}
+    constructor() ERC721("NeoHR", "NHR") {}
 
     function mint(address player) public onlyOwner returns (uint256) {
         _tokenId += 1;
@@ -23,8 +23,8 @@ contract PassoGO is ERC721URIStorage, Ownable {
         return _tokenId;
     }
 
-    function mint10(address player) public onlyOwner {
-        for (uint256 i = 0; i < 10; i++) {
+    function mint5(address player) public onlyOwner {
+        for (uint256 i = 0; i < 5; i++) {
             mint(player);
         }
     }

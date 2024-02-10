@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile":"npx hardhat compile",
-    "deploy":"npx hardhat run scripts/deploy.js --network mumbai",
-    "deploy-polygon":"npx hardhat run scripts/deploy.js --network polygon",
-    "mint-more":"npx hardhat run scripts/mintMore.js --network polygon"
+    "compile": "npx hardhat compile",
+    "deploy": "npx hardhat run scripts/deploy.js --network mumbai",
+    "deploy-polygon": "npx hardhat run scripts/deploy.js --network polygon",
+    "mint-more": "npx hardhat run scripts/mintMore.js --network mumbai"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "@openzeppelin/contracts": "^4.3.2",
-    "dotenv": "^10.0.0"
+    "dotenv": "^10.0.0",
+    "xlsx": "^0.18.5"
   }
 }
